@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harvest Link | AI Crop Health</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <nav>
+        <h1>🌿 HARVEST LINK</h1>
+        <span class="team-name">by BPPIMT</span>
+        <div class="nav-buttons">
+          <button class="tab-button" onclick="showTab('home')">🏠 Home</button>
+          <div class="language-toggle">
+            <button id="toggle-en">EN</button>
+            <button id="toggle-bn">বাংলা</button>
+            <button id="toggle-hi">हिन्दी</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HOME TAB -->
+      <div id="home-tab" class="tab-content">
+        <div class="hero">
+          <div class="hero-text">
+            <h2 id="hero-heading">AI-Powered Crop Disease Detection</h2>
+            <p id="hero-description">Upload a crop image to detect diseases and get expert treatment suggestions instantly.</p>
+          </div>
+        </div>
+
+        <section class="upload-section">
+          <h3 id="upload-heading">🌾 Upload Your Crop Image</h3>
+          <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" id="imageInput" required />
+            <button type="submit" id="submit-button">🔍 Detect Disease</button>
+          </form>
+          
+          <!-- File name display -->
+          <p id="file-name-display" class="file-name"></p>
+          <div id="loader" class="hidden">🔄 Analyzing image...</div>
+        </section>
+
+        <section id="result" class="hidden">
+          <h3 id="result-heading">🧪 Prediction Result</h3>
+          <p><strong id="disease-label">Disease:</strong> <span id="disease"></span></p>
+          <p><strong id="confidence-label">Confidence:</strong> <span id="confidence"></span>%</p>
+          <p><strong id="treatment-label">Treatment:</strong> <span id="treatment"></span></p>
+        </section>
+      </div>
+
+      <!-- ABOUT SECTION -->
+      <section class="about-section">
+        <h3 id="about-heading">📖 About Us</h3>
+        <p id="about-content-en" class="lang-content">
+          HARVEST LINK is an AI-powered tool developed by Team Harvest Link of BPPIMT to help farmers identify crop diseases early and get treatment recommendations instantly. By analyzing uploaded crop images using advanced machine learning techniques, it helps prevent the spread of plant diseases and reduces crop loss. This tool is built to empower farmers with real-time insights and promote sustainable agricultural practices across rural and urban farming communities.
+        </p>
+        <p id="about-content-bn" class="lang-content">
+          হারভেস্ট লিংক একটি কৃত্রিম বুদ্ধিমত্তা নির্ভর টুল, যা BPPIMT-এর টিম হারভেস্ট লিংক দ্বারা নির্মিত। এটি কৃষকদের ফসলের রোগ দ্রুত সনাক্ত করতে এবং তৎক্ষণাৎ চিকিৎসার পরামর্শ পেতে সাহায্য করে। ছবির মাধ্যমে রোগ বিশ্লেষণ করে এটি ফসলের ক্ষতি কমিয়ে কৃষিতে টেকসই পদ্ধতি বজায় রাখতে সহায়তা করে।
+        </p>
+        <p id="about-content-hi" class="lang-content">
+          हार्वेस्ट लिंक एक एआई-सक्षम उपकरण है जिसे बीपीपीआईएमटी की टीम हार्वेस्ट लिंक द्वारा विकसित किया गया है। यह किसानों को फसलों की बीमारियों की पहचान करने और तुरंत उपचार सुझाव प्राप्त करने में मदद करता है। यह उपकरण उन्नत मशीन लर्निंग का उपयोग करके बीमारियों का विश्लेषण करता है और किसानों को सशक्त बनाता है।
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p id="footer-text">© 2025 Team Harvest Link. Empowering Farmers with AI 🌾</p>
+    </footer>
+  </div>
+
+  <script>
+    // File name display logic
+    document.getElementById('imageInput').addEventListener('change', function () {
+      const fileDisplay = document.getElementById('file-name-display');
+      if (this.files && this.files[0]) {
+        fileDisplay.textContent = `📄 Selected File: ${this.files[0].name}`;
+      } else {
+        fileDisplay.textContent = '';
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
