@@ -1,12 +1,12 @@
 # Crop_Disease_Detection
 
-# IoT-Enhanced Crop Disease Detection System 🌱📷
+# IoT-Enhanced Crop Disease Detection System 🌱
 
 This project presents a **low-cost, multilingual, offline-operable crop disease detection system** designed to support farmers in rural and under-resourced agricultural regions. By combining **deep learning (MobileNetV2 CNN)** with **edge deployment** on Raspberry Pi, the system enables **real-time leaf disease diagnosis** without requiring internet connectivity.
 
 The solution provides **text and audio-based guidance in both English and Bengali**, ensuring accessibility for farmers across different literacy levels.
 
-## 🔍 Key Features
+## Key Features
 
 | Feature | Description |
 |--------|-------------|
@@ -19,7 +19,7 @@ The solution provides **text and audio-based guidance in both English and Bengal
 
 ---
 
-## 🧠 Machine Learning Overview
+## Machine Learning Overview
 
 - **Model Type:** Convolutional Neural Network (CNN)
 - **Architecture Used:** **MobileNetV2**
@@ -36,5 +36,8 @@ The solution provides **text and audio-based guidance in both English and Bengal
 
 ---
 
-## 🏗️ System Workflow
+## System Workflow
 
+The overall system workflow from data input to user guidance is illustrated below:
+
+![System Workflow](assets/flowchart.png)
