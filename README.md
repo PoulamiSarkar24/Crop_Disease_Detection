@@ -1,5 +1,3 @@
-# Crop_Disease_Detection
-
 # IoT-Enhanced Crop Disease Detection System 🌱
 
 This project presents a **low-cost, multilingual, offline-operable crop disease detection system** designed to support farmers in rural and under-resourced agricultural regions. By combining **deep learning (MobileNetV2 CNN)** with **edge deployment** on Raspberry Pi, the system enables **real-time leaf disease diagnosis** without requiring internet connectivity.
@@ -46,7 +44,7 @@ The overall system workflow from data input to user guidance is illustrated belo
 
 ---
 
-## 📦 Required Libraries
+## Required Libraries
 
 | Library | Purpose |
 |--------|---------|
@@ -58,7 +56,7 @@ The overall system workflow from data input to user guidance is illustrated belo
 | `Adafruit_SSD1306` | OLED display control (for Pi version) |
 | `RPi.GPIO` | Hardware pin control (if required) |
 
-## 🌾 Supported Crops & Diseases
+## Supported Crops & Diseases
 
 | Crop Name | Detected Diseases | Notes |
 |----------|------------------|-------|
@@ -67,11 +65,11 @@ The overall system workflow from data input to user guidance is illustrated belo
 | Rice     | Brown Spot, Leaf Blast | Can be extended to more paddy diseases |
 | Maize    | Common Rust, Leaf Blight | Field-tested sample images included |
 
-> ✅ Additional crops and diseases can be added by retraining or fine-tuning the model.
+> Additional crops and diseases can be added by retraining or fine-tuning the model.
 
 ---
 
-## 📌 Project Status
+## Project Status
 
 | Component | Status | Details |
 |----------|--------|---------|
@@ -82,7 +80,7 @@ The overall system workflow from data input to user guidance is illustrated belo
 
 ---
 
-## 🤝 Contributors
+## Contributors
 
 - **Poulami Sarkar**
 - **Navoneel Dey**
