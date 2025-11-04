@@ -40,4 +40,4 @@ The solution provides **text and audio-based guidance in both English and Bengal
 
 The overall system workflow from data input to user guidance is illustrated below:
 
-![System Workflow](assets/flowchart.png)
+![System Workflow](assets/System Workflow.png)
